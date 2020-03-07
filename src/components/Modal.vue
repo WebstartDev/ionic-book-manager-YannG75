@@ -69,7 +69,7 @@
                            @input="$v.book.pageCount.$model = $event.target.value" :value="book.pageCount"></ion-input>
             </ion-item>
                         <div class="error" v-if="(NewBook && !$v.NewBook.pageCount.required && $v.NewBook.pageCount.$error) || (book && !$v.book.pageCount.required && $v.book.pageCount.$error )">Field is required.</div>
-                        <div class="error" v-if="(NewBook && !$v.NewBook.pageCount.integer && $v.NewBook.pageCount.$error) || (book && !$v.book.pageCount.integer && $v.book.pageCount.$error )">Field is required.</div>
+                        <div class="error" v-if="(NewBook && !$v.NewBook.pageCount.integer && $v.NewBook.pageCount.$error) || (book && !$v.book.pageCount.integer && $v.book.pageCount.$error )">Only number accepted.</div>
 
 
             <div style="display: flex; justify-content: center">
@@ -211,6 +211,7 @@
         color: #ff3a50;
         font-style: italic;
         text-shadow: black 1px 1px 7px;
+        margin-bottom: 5px;
     }
 
     ion-toolbar {
